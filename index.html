@@ -1,0 +1,150 @@
+<!-- Clone by @WusThanhDieu -->
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yeuemm</title>
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body class="font-sans antialiased">
+    <div
+      id="app"
+      data-page='{
+        "component": "views/home",
+        "props": {
+          "errors": {},
+          "name": "Github WusThanhDieu",
+          "quote": {
+            "message": "",
+            "author": ""
+          },
+          "auth": {
+            "user": null
+          },
+          "ziggy": {
+            "port": null,
+            "defaults": [],
+            "routes": {
+              "home": {
+                "uri": "/",
+                "methods": ["GET", "HEAD"]
+              },
+              "show-create-form": {
+                "uri": "create-message/{id?}",
+                "methods": ["GET", "HEAD"],
+                "parameters": ["id"]
+              },
+              "create-form": {
+                "uri": "create-message",
+                "methods": ["POST"]
+              },
+              "login": {
+                "uri": "login",
+                "methods": ["GET", "HEAD"]
+              },
+              "logout": {
+                "uri": "logout",
+                "methods": ["POST"]
+              },
+              "storage.local": {
+                "uri": "storage/{path}",
+                "methods": ["GET", "HEAD"],
+                "wheres": {
+                  "path": ".*"
+                },
+                "parameters": ["path"]
+              }
+            },
+            "location": ""
+          },
+          "message": "",
+          "client": {
+            "fontName": "Mali",
+            "color": "#ff0019",
+            "messages": [
+              "VietKien 1204 &#10084;&#10084;&#10084;",
+              "VietKien 1204 &#10084;&#10084;&#10084;",
+              "VietKien 1204 &#10084;&#10084;&#10084;"
+            ],
+            "music": "/"
+          },
+          "clientId": "/"
+        },
+        "url": "/",
+        "version": "",
+        "clearHistory": false,
+        "encryptHistory": false
+      }
+      '
+    >
+  </div>
+  <script type="module" src="/static/js/app.js"></script>
+  <script type="module" src="/static/js/home.js"></script>
+    <div class='codepro-music-box'>
+  <button class='codepro-music-box-toggle-btn'>
+    <a title='Play music'><i class='fa fa-music'></i></a>
+  </button>
+  <audio id="custom-audio" src="https://thhlam77.github.io/music/kkk.mp3"></audio>
+</div>
+
+<style>
+  .codepro-music-box {
+    position: fixed;
+    width: 300px;
+    height: 160px;
+    z-index: 120;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .codepro-music-box a {
+    color: #fff;
+  }
+
+  .codepro-music-box button {
+    background: rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #e6e6e6;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 991px) {
+    .codepro-music-box {
+      width: 250px;
+      height: 120px;
+    }
+
+    .codepro-music-box button {
+      left: 0;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    const audio = document.getElementById("custom-audio");
+    $(".codepro-music-box-toggle-btn").on("click", function () {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  });
+</script>
+  </body>
+</html>
